@@ -7,7 +7,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.1",
+    packageVersion: "1.0.3",
     type: NODE_TYPE,
     name: "DynamoDB",
     description: "Upload a record to an AWS DynamoDB table",
