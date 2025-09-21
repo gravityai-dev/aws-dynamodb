@@ -7,7 +7,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.12",
+    packageVersion: "1.0.15",
     type: NODE_TYPE,
     name: "DynamoDB Service",
     description: "Provides DynamoDB operations as a service for other nodes",
@@ -15,8 +15,8 @@ function createNodeDefinition(): EnhancedNodeDefinition {
     logoUrl: "https://res.cloudinary.com/sonik/image/upload/v1751473913/gravity/icons/DynamoDB.png",
     color: "#4B61D1", // AWS DynamoDB Blue
 
-    // Mark as service node
-    isService: true,
+    // Node template for styling
+    template: "service", // Options: "standard", "service", "mini"
 
     // No inputs/outputs for service nodes
     inputs: [],
@@ -28,7 +28,8 @@ function createNodeDefinition(): EnhancedNodeDefinition {
         name: "nosqlService",
         description: "Provides NoSQL database operations",
         serviceType: "nosql",
-        methods: ["put", "get", "query", "update", "delete", "batchGet", "batchWrite"],
+        methods: ["put", "get", "query", "scan", "delete", "update"],
+        isService: true, // This node PROVIDES NoSQL services to others
       },
     ],
 
