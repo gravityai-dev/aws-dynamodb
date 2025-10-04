@@ -7,7 +7,7 @@ function createNodeDefinition(): EnhancedNodeDefinition {
   const { NodeInputType } = getPlatformDependencies();
   
   return {
-    packageVersion: "1.0.15",
+    packageVersion: "1.0.17",
     type: NODE_TYPE,
     name: "DynamoDB Service",
     description: "Provides DynamoDB operations as a service for other nodes",
